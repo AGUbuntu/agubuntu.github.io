@@ -1,144 +1,82 @@
 <!DOCTYPE html>
+<!--
+    This file is part of agubuntu.github.io.
+
+    agubuntu.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+    agubuntu.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with agubuntu.github.io. If not, see <https://www.gnu.org/licenses/>.
+-->
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      body {
-        background-color: #222; /* Darker background color for the entire site */
-        color: white; /* Text color for the entire site */
-        text-align: center; /* Center align text in the body */
-        font-family: "Source Sans Pro"; /* Use Source Sans Pro font for the entire body */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow-x: hidden!important;
-        width: 100vw;
-      }
-      h1,
-      h2 {
-        margin-bottom: 20px; /* Increase spacing between headings */
-      }
-      h3 {
-        margin-bottom: 10px; /* Adjust margin for h3 */
-      }
-      p {
-        margin-bottom: 10px; /* Adjust margin for regular text */
-      }
-
-      .header {
-        background-color: #222; /* Same color as body for header */
-        text-align: center;
-        padding: 20px;
-      }
-      .header a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-      }
-      .middle-section {
-        background-color: #222; /* Same color as body for middle section */
-        text-align: center;
-        width: 80%;
-        text-wrap: wrap;
-      }
-      .middle-section h1,
-      .middle-section h2,
-      .middle-section h3,
-      .middle-section p {
-        text-align: center; /* Center align text in the middle section */
-      }
-      .footer {
-        background-color: #333; /* Lighter background color for the footer */
-        text-align: center;
-        padding: 20px;
-        width: 100vw!important;
-      }
-      .footer a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-      }
-
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-
-      @media only screen and (max-width: 1080px) {
-        h3 {
-          font-size: 16px; /* Set smaller font size for h3 on smaller screens */
-        }
-        p {
-          font-size: 14px; /* Set smaller font size for regular text on smaller screens */
-        }
-        .middle-section {
-          padding: 10px; /* Reduce padding for smaller screens */
-        }
-        .features-list {
-          text-align: left; /* Change text alignment to left for smaller screens */
-        }
-        @media (max-width: 368px) {
-            .downloadImg {
-                width: 248px!important;
-            }
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="source/style.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro"
     />
   </head>
   <body>
-    <div class="header">
+    <header>
       <h1><b>AGUbuntu</b></h1>
       <img src="https://a.fsdn.com/allura/p/agubuntu/icon?1711873001&w=90" />
-    </div>
+    </header>
 
     <div class="middle-section">
-      <h2><b>What is AGUbuntu?</b></h2>
-      <h3>
-        AGUbuntu is an unofficial Ubuntu flavour based on Lubuntu, created
-        using CUBIC, for the old & low-spec lab computers at AGU.
-      </h3>
+      <article>
+        <h2><b>What is AGUbuntu?</b></h2>
+        <h3>
+          AGUbuntu is an unofficial Ubuntu flavour based on Lubuntu, created
+          using CUBIC, for the old & low-spec lab computers at AGU.
+        </h3>
 
-      <h2><b>Features and Screenshots</b></h2>
-      <p>Calamares configuration set up for distribution</p>
-      <p>Customized plymouth boot screen</p>
-      <p>A different wallpaper</p>
-      <p>Zoom, Chrome, Onlyoffice and MS-365 preinstalled</p>
-      <p>Department-specific package installer</p>
-      <p>And its name in the configurations is AGUbuntu, nothing else</p>
-      <img
-        src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot%202024-03-30%20195007-7f8062f2.png/max/max/1"
-      />
-      <img
-        src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot%202024-03-30%20195249-8b2ec8fa.png/max/max/1"
-      />
-      <img
-        src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot%202024-03-30%20200329-92ae6a22.png/max/max/1"
-      />
+        <h2><b>Changelogs and Screenshots</b></h2>
+        <p>----------------------------------------------------------------------------------</p>
+        <h3><b>22.04-LTS:</b></h3>
+        <p>Calamares configuration set up for distribution</p>
+        <p>Customized plymouth boot screen</p>
+        <p>A different wallpaper</p>
+        <p>Zoom, Chrome, Onlyoffice and MS-365 preinstalled</p>
+        <p>Department-specific package installer</p>
+        <p>And its name in the configurations is AGUbuntu, nothing else</p>
+        <p>----------------------------------------------------------------------------------</p>
+        <h3><b>24.04-LTS:</b></h3>
+        <p>"apt-btrfs-snapshot" and "unattended-upgrades" packages installed and configured</p>
+        <p>Department Package Installers base changed to Python PySide6</p>
+        <p>Chrome is now default browser</p>
+        <p>Kate, HPLIP, Timeshift, Q4Wine and ProtonUp-QT added</p>
+        <p>Plymouth boot theme changed</p>
+        <p>Thanks to Lubuntu, LXQT version is now 1.4.0 and Installer Prompt become default</p>
+        <p>Removed "Customize" tab from Calamares</p>
+        <p>Wallpaper changed bla bla bla</p>
+        <p>Nothing more</p>
+        <p>----------------------------------------------------------------------------------</p>
+        <img src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot%202024-03-30%20195007-7f8062f2.png/max/max/1">
+        <img src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot_20240510_101137-7a2cf850.png/max/max/1">
+        <img src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot_20240510_101608-81bec7b0.png/max/max/1">
 
-      <h2><b>Download ISO</b></h2>
-      <a href="https://sourceforge.net/projects/agubuntu/files/latest/download"
-        ><img
-          alt="Download AGUbuntu"
-          src="https://a.fsdn.com/con/app/sf-download-button"
-          width="276"
-          height="48"
-          srcset="
-            https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x
-          "
-          style="object-fit: cover!important; border-radius: 4px; width: auto; height: auto;"
-          class="downloadImg"
-      /></a>
+        <h2><b>Download ISO</b></h2>
+        <a href="https://sourceforge.net/projects/agubuntu/files/latest/download">
+          <img
+            alt="Download AGUbuntu"
+            src="https://a.fsdn.com/con/app/sf-download-button"
+            width="276"
+            height="48"
+            srcset="
+              https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x
+            "
+            style="object-fit: cover!important; border-radius: 4px; width: auto; height: auto;"
+            class="downloadImg">
+        </a>
+      </article>
     </div>
 
-    <div class="footer">
+    <footer>
       <h2>Useful Links</h2>
       <a href="https://github.com/AGUbuntu" target="_blank">GitHub</a>
       <a href="https://agubuntu.sourceforge.io" target="_blank">SourceForge</a>
-    </div>
+    <footer>
   </body>
 </html>
