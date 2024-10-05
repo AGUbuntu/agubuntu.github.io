@@ -1,82 +1,197 @@
 <!DOCTYPE html>
-<!--
-    This file is part of agubuntu.github.io.
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="#5e5db8">
+        <meta name="generator" content="Astro v3.5.3">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="AGUbuntu">
+        <meta property="og:description" content="Hi there, I'm maisy. I would appreciate it if you read this website.">
+        <meta property="og:image" content="/blueberries.png">
+        <link rel="icon" type="image/png" href="/img/icon.png">
+        <link rel="me" href="https://wetdry.world/@maisy">
+        <title>AGUbuntu</title>
+        <link rel="stylesheet" href="\style.css"/>
+        <style>
+            .rain-root {
+                overflow: hidden;
+                position: fixed;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -2
+            }
 
-    agubuntu.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+            .drop {
+                position: absolute;
+                bottom: 100%;
+                width: 15px;
+                height: 120px;
+                pointer-events: none;
+                animation: drop .5s linear infinite
+            }
 
-    agubuntu.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+            .stem {
+                width: 1px;
+                height: 100%;
+                margin-left: 7px;
+                background: linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.125));
+                animation: stem .5s linear infinite
+            }
 
-    You should have received a copy of the GNU General Public License along with agubuntu.github.io. If not, see <https://www.gnu.org/licenses/>.
--->
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="source/style.css">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro"
-    />
-  </head>
-  <body>
-    <header>
-      <h1><b>AGUbuntu</b></h1>
-      <img src="https://a.fsdn.com/allura/p/agubuntu/icon?1711873001&w=90" />
-    </header>
+            .splat {
+                width: 15px;
+                height: 5px;
+                border-top: 2px dotted rgba(255,255,255,.25);
+                border-radius: 50%;
+                opacity: 1;
+                transform: scale(0);
+                animation: splat .5s linear infinite
+            }
 
-    <div class="middle-section">
-      <article>
-        <h2><b>What is AGUbuntu?</b></h2>
-        <h3>
-          AGUbuntu is an unofficial Ubuntu flavour based on Lubuntu, created
-          using CUBIC, for the old & low-spec lab computers at AGU.
-        </h3>
+            @keyframes drop {
+                0% {
+                    transform: translateY(0)
+                }
 
-        <h2><b>Changelogs and Screenshots</b></h2>
-        <p>----------------------------------------------------------------------------------</p>
-        <h3><b>22.04-LTS:</b></h3>
-        <p>Calamares configuration set up for distribution</p>
-        <p>Customized plymouth boot screen</p>
-        <p>A different wallpaper</p>
-        <p>Zoom, Chrome, Onlyoffice and MS-365 preinstalled</p>
-        <p>Department-specific package installer</p>
-        <p>And its name in the configurations is AGUbuntu, nothing else</p>
-        <p>----------------------------------------------------------------------------------</p>
-        <h3><b>24.04-LTS:</b></h3>
-        <p>"apt-btrfs-snapshot" and "unattended-upgrades" packages installed and configured</p>
-        <p>Department Package Installers base changed to Python PySide6</p>
-        <p>Chrome is now default browser</p>
-        <p>Kate, HPLIP, Timeshift, Q4Wine and ProtonUp-QT added</p>
-        <p>Plymouth boot theme changed</p>
-        <p>Thanks to Lubuntu, LXQT version is now 1.4.0 and Installer Prompt become default</p>
-        <p>Removed "Customize" tab from Calamares</p>
-        <p>Wallpaper changed bla bla bla</p>
-        <p>Nothing more</p>
-        <p>----------------------------------------------------------------------------------</p>
-        <img src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot%202024-03-30%20195007-7f8062f2.png/max/max/1">
-        <img src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot_20240510_101137-7a2cf850.png/max/max/1">
-        <img src="https://a.fsdn.com/con/app/proj/agubuntu/screenshots/Screenshot_20240510_101608-81bec7b0.png/max/max/1">
+                75% {
+                    transform: translateY(100vh)
+                }
 
-        <h2><b>Download ISO</b></h2>
-        <a href="https://sourceforge.net/projects/agubuntu/files/latest/download">
-          <img
-            alt="Download AGUbuntu"
-            src="https://a.fsdn.com/con/app/sf-download-button"
-            width="276"
-            height="48"
-            srcset="
-              https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x
-            "
-            style="object-fit: cover!important; border-radius: 4px; width: auto; height: auto;"
-            class="downloadImg">
-        </a>
-      </article>
-    </div>
+                to {
+                    transform: translateY(100vh)
+                }
+            }
 
-    <footer>
-      <h2>Useful Links</h2>
-      <a href="https://github.com/AGUbuntu" target="_blank">GitHub</a>
-      <a href="https://agubuntu.sourceforge.io" target="_blank">SourceForge</a>
-    <footer>
-  </body>
+            @keyframes stem {
+                0% {
+                    opacity: 1
+                }
+
+                65% {
+                    opacity: 1
+                }
+
+                75% {
+                    opacity: 0
+                }
+
+                to {
+                    opacity: 0
+                }
+            }
+
+            @keyframes splat {
+                0% {
+                    opacity: 1;
+                    transform: scale(0)
+                }
+
+                80% {
+                    opacity: 1;
+                    transform: scale(0)
+                }
+
+                90% {
+                    opacity: .5;
+                    transform: scale(1)
+                }
+
+                to {
+                    opacity: 0;
+                    transform: scale(1.5)
+                }
+            }
+        </style>
+
+    </head>
+    <body class="bg-secondary bg-gradient-to-b from-primary to-secondary text-normal bg-no-repeat bg-fixed font-mono tracking-tight scrollbar scrollbar-track-color-transparent scrollbar-thumb-color-accent scrollbar-w-2 undefined">
+        <div class="rain-root"></div>
+        <div class="h-screen flex sm:flex-row sm:justify-center overflow-y-auto">
+            <main class="p-6 sm:w-[75%] sm:max-w-[1920px] sm:h-fit lt-sm:w-full" style="margin-top:auto;margin-bottom:auto">
+                <h1 id="hi-there-im-maisy">
+                    <span class="font-bold color-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-alt">AGUbuntu</span>
+                    
+                </h1>
+                <p>AGUbuntu is an unofficial Ubuntu flavour based on Lubuntu, created using CUBIC, for the old & low-spec lab computers at <a href="https://www.agu.edu.tr/">AGU</a></p>
+                <h2 id="what-is-agubuntu">What exactly is AGUbuntu?</h2>
+                <ul>
+                    <li>
+                        AGUbuntu is a Lubuntu-based distribution, specifically modified for computers and learners in Abdullah Gul University.
+                    </li>
+                    <li>
+                        Our goal is to provide Linux the best & easy experience to the learners in Abdullah Gul University
+                    </li>
+                    <li>
+                        Our distribution's source code is open source and is available at <a href="https://github.com/agubuntu">our GitHub</a>
+                    </li>
+                </ul>
+                
+                <br/>
+                  <p>Check out the people who helped AGUbuntu possible:</p>
+                <div id="frens" class="flex flex-row flex-wrap gap-2 mt-2">
+                    <a href="https://github.com/efeisot">Efeisot, </a>
+                    <a href="https://github.com/enis26">enis26, </a>
+                    <a href="https://github.com/mrtozkn">mrtozkn, </a>
+                    <a href="https://github.com/asparagas06">Asparagas</a>
+                    </a>
+                </div>
+                <br/>
+            </li>
+                <p class="text-lg">Thanks for supporting AGUbuntu</p>
+                <sup>- <a href="https://github.com/agubuntu">AGUbuntu</a> & <a href="https://github.com/alqnisot">Alqnisot</a></sup>
+            
+                <h2>24.04-LTS:</h2>
+                <ul>
+                    <li>
+                        "apt-btrfs-snapshot" and "unattended-upgrades" packages installed and configured
+                    </li>
+                    <li>
+                        Department Package Installers base changed to Python PySide6
+                    </li>
+                    <li>
+                        Chrome is now default browser
+                    </li>
+                    <li>
+                        Kate, HPLIP, Timeshift, Q4Wine and ProtonUp-QT added
+                    </li>
+                    <li>
+                        Plymouth boot theme changed
+                    </li>
+                    <li>
+                        Thanks to Lubuntu, LXQT version is now 1.4.0 and Installer Prompt become default
+                    </li>
+                    <li>
+                        Changed wallpapers, and added new ones.
+                    </li>
+                </ul>
+
+                <h2>22.04-LTS:</h2>
+                <ul>
+                    <li>
+                        Calamares configuration set up for distribution
+                    </li>
+                    <li>
+                        Customized plymouth boot screen
+                    </li>
+                    <li>
+                        A different wallpaper
+                    </li>
+                    <li>
+                        Zoom, Chrome, Onlyoffice and MS-365 preinstalled
+                    </li>
+                    <li>
+                        Department-specific package installer
+                    </li>
+                    <li>
+                        The name in the configurations has changed to AGUbuntu
+                    </li>
+                
+                </ul>
+            </main>
+        </div>
+    </body>
 </html>
+
+
